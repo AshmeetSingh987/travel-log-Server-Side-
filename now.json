@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "name": "travel-log",
+  "builds": [
+    {
+      "src": "src/index.js",
+      "use": "@now/node-server"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/.*",
+      "dest": "src/index.js"
+    }
+  ],
+  "alias": [
+    "travel-log"
+  ] , 
+  "env":{
+    "NODE_ENV": "production" , 
+    "PORT":"1337" , 
+    "DATABASE_URL":"mongodb+srv://ashmeetsingh987:ashmeetsingh987@gmail.com@cluster0.dguy2.mongodb.net/travel-log?retryWrites=true&w=majority",
+    "CORS_ORIGIN":"http://localhost:3000" , 
+    "API_KEY":""
+
+  }
+}
